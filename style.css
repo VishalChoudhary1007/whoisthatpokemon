@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    /* font-weight: 400; */
+    font-style: normal;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    background-color: #333;
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10%; */
+}
+
+h1 {
+    
+    font-size: 3rem;
+    color: #ff6347;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#game {
+    margin-bottom: 20px;
+}
+
+#silhouette-container {
+    margin: 20px auto;
+    background-color: #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.silhouette {
+    filter: brightness(0);
+    max-width: 100%;
+    height: auto;
+}
+
+#guess-section {
+    margin-top: 20px;
+}
+
+#guess-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+#result-section {
+    width:100vw;
+    /* height:100vh; */
+    position:absolute;
+    top:0px;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+    padding:2%;
+}
+
+#result-section img {
+    width: 200px;
+    height:200px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    animation: float 3s ease-in-out infinite;
+}
+
+#result-section img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#result-section h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+#result-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#result-section #feedback {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff6347;
+}
+
+#result-section #pokemon-info {
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #result-section img {
+        width: 100%;
+    }
+
+    button, #guess-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #silhouette-container {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+.nav{
+align-self: flex-start;
+width:90%;
+height:10vh;
+    background-color: yellow;
+    border-radius: 0px 15px 15px 0px;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+padding:2%;
+}
+
+video{
+width:100%;
+height:100%;
+position: fixed;
+top:10vh;
+
+
+}
+.overlay{
+    width:100vw;
+    color:orange;
+    height:100vh;
+    position: relative;
+    top:0vh;
+    background-color:rgba(0, 0, 0, 0.8);
+    /* display: flex;
+    flex-direction:  column;  */
+    /* align-items: center;
+    justify-content: center; */
+
+}
+.overlay h1{
+position: relative;
+top:40%;
+text-align: center;
+width: 100%;
+color:orange;
+}
+.overlay button{
+    position: relative; 
+     top:45%;
+     left:30%;
+    color:black;
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 40%;
+    height:40px;
+
+
+}
+.footer{
+
+
+    width:100vw;
+    height:15vh;
+    position: relative;
+    bottom: 0px;
+    background-color: black;
+    text-align:center;
+    padding:2%;
+    font-size:0.8em;
+    font-weight: bold;
+    color:white;
+    
+}
+#pop{
+
+width: 100vw;
+height:100vh;
+    position: absolute;
+    bottom: 30%;
+    left: 40%;
+    display: none;
+}
+
